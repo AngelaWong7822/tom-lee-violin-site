@@ -1206,6 +1206,39 @@ button.service-card__more-link {
   padding-top: 0;
 }
 
+.contact-success-modal.lightbox .lightbox__panel {
+  max-width: min(92vw, 22rem);
+  padding: var(--space-lg);
+  border: 1px solid rgba(197, 160, 89, 0.5);
+  border-radius: 6px;
+  background: linear-gradient(165deg, rgba(18, 16, 14, 0.98) 0%, rgba(8, 8, 8, 0.99) 100%);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.55);
+}
+
+.contact-success-modal__title {
+  margin: 0 0 var(--space-sm);
+  padding: 0;
+  font-family: var(--font-heading);
+  font-size: clamp(1.15rem, 2.8vw, 1.35rem);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: #e4c77a;
+}
+
+.contact-success-modal__detail {
+  margin: 0 0 var(--space-md);
+  font-size: 0.9rem;
+  line-height: 1.55;
+  text-align: center;
+  color: rgba(232, 230, 227, 0.88);
+}
+
+.contact-success-modal__ok {
+  width: 100%;
+  max-width: 12rem;
+}
+
 @media (min-width: 900px) {
   .contact-form-panel {
     padding-top: 0.15rem;

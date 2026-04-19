@@ -1312,18 +1312,49 @@
                     placeholder="Your message…"
                   ></textarea>
                 </div>
-                <p class="form-privacy" data-en="By submitting, you agree to be contacted regarding your enquiry. This form opens your email app to send the message."
-                  data-zh="提交後即表示同意就查詢與您聯絡。此表單會開啟電郵程式送出。"
+                <p class="form-privacy" data-en="By submitting, you agree to be contacted regarding your enquiry. WhatsApp will open with your message ready to send to our studio number."
+                  data-zh="提交即表示同意就查詢與您聯絡。接下來會開啟 WhatsApp，並已預填查詢內容，請於對話中送出。"
                 >
-                  By submitting, you agree to be contacted regarding your enquiry. This form opens your email app to send the message.
+                  By submitting, you agree to be contacted regarding your enquiry. WhatsApp will open with your message ready to send to our studio number.
                 </p>
-                <button type="submit" class="btn btn-primary form-submit" data-en="Send enquiry" data-zh="送出查詢">Send enquiry</button>
+                <button type="submit" class="btn btn-primary form-submit" data-en="Send via WhatsApp" data-zh="用 WhatsApp 送出">Send via WhatsApp</button>
               </form>
             </div>
           </div>
         </div>
       </section>
     </main>
+
+    <div
+      id="contact-success-modal"
+      class="lightbox contact-success-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="contact-success-modal-title"
+      hidden
+    >
+      <div class="lightbox__backdrop" tabindex="-1" data-contact-success-close></div>
+      <div class="contact-success-modal__panel lightbox__panel">
+        <h2
+          id="contact-success-modal-title"
+          class="contact-success-modal__title"
+          data-en="Opening WhatsApp"
+          data-zh="正在開啟 WhatsApp"
+        >
+          Opening WhatsApp
+        </h2>
+        <p id="contact-success-modal-detail" class="contact-success-modal__detail"></p>
+        <button
+          type="button"
+          class="btn btn-primary contact-success-modal__ok"
+          data-contact-success-close
+          data-en="OK"
+          data-zh="確定"
+        >
+          OK
+        </button>
+      </div>
+    </div>
 
     <div
       id="cert-lightbox"

@@ -11,6 +11,17 @@
   const SUPPORTED = ["en", "zh"];
   const CONTACT_EMAIL = "tomleeviolin@gmail.com";
 
+  /** 與站內 wa.me 連結一致（香港 +852） */
+  const CONTACT_WHATSAPP_PHONE = "85295179962";
+
+  /** 副標留空＝彈窗只顯示標題；詳情可放 whatsapp */
+  const CONTACT_SUCCESS = {
+    whatsapp: {
+      en: "",
+      zh: "",
+    },
+  };
+
   const PAGE = document.body.getAttribute("data-page") || "home";
 
   const metaDescription = {
@@ -339,9 +350,85 @@
     tick();
   }
 
+  function onContactSuccessEscape(e) {
+    if (e.key === "Escape") {
+      closeContactSuccessModal();
+    }
+  }
+
+  function closeContactSuccessModal() {
+    const modal = document.getElementById("contact-success-modal");
+    if (!modal || modal.hidden) return;
+    modal.hidden = true;
+    document.body.style.overflow = "";
+    document.removeEventListener("keydown", onContactSuccessEscape);
+  }
+
+  function hideContactFormSuccess() {
+    closeContactSuccessModal();
+  }
+
+  function showContactFormSuccess(mode) {
+    const modal = document.getElementById("contact-success-modal");
+    const detail = document.getElementById("contact-success-modal-detail");
+    const okBtn = document.querySelector(".contact-success-modal__ok");
+    if (!modal) return;
+    const lang = document.documentElement.getAttribute("lang") || "";
+    const useZh = lang.toLowerCase().indexOf("zh") === 0;
+    const pack = CONTACT_SUCCESS[mode] || CONTACT_SUCCESS.whatsapp;
+    if (detail && pack) {
+      var sub = useZh ? pack.zh : pack.en;
+      detail.textContent = sub || "";
+      detail.hidden = !sub;
+    }
+    modal.hidden = false;
+    document.body.style.overflow = "hidden";
+    document.removeEventListener("keydown", onContactSuccessEscape);
+    document.addEventListener("keydown", onContactSuccessEscape);
+    if (okBtn && typeof okBtn.focus === "function") {
+      window.requestAnimationFrame(function () {
+        okBtn.focus();
+      });
+    }
+  }
+
+  function initContactSuccessModal() {
+    const modal = document.getElementById("contact-success-modal");
+    if (!modal) return;
+    const panel = modal.querySelector(".contact-success-modal__panel");
+    modal.querySelectorAll("[data-contact-success-close]").forEach(function (el) {
+      el.addEventListener("click", function (e) {
+        e.stopPropagation();
+        closeContactSuccessModal();
+      });
+    });
+    if (panel) {
+      panel.addEventListener("click", function (e) {
+        e.stopPropagation();
+      });
+    }
+  }
+
+  function refreshContactFormUi() {
+    var lang = document.documentElement.getAttribute("lang") || "";
+    var key = lang.toLowerCase().indexOf("zh") === 0 ? "zh" : "en";
+    applyTranslations(key);
+    updatePlaceholders(key);
+  }
+
+  /** 送出後開 WhatsApp，訊息已預填查詢內容。 */
   function initContactForm() {
     const form = document.getElementById("contact-form");
     if (!form) return;
+    form.querySelectorAll("input, select, textarea").forEach(function (el) {
+      el.addEventListener(
+        "focus",
+        function () {
+          hideContactFormSuccess();
+        },
+        { passive: true }
+      );
+    });
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       const nameEl = document.getElementById("contact-name");
@@ -360,9 +447,26 @@
       const message = messageEl.value.trim();
       const opt = purposeEl.options[purposeEl.selectedIndex];
       const purposeText = opt ? opt.textContent.trim() : "";
-      const subject = encodeURIComponent("Tom Lee Violin Studio — " + purposeText);
-      const body = encodeURIComponent(
-        "Name: " +
+      const lang = document.documentElement.getAttribute("lang") || "";
+      const useZh = lang.toLowerCase().indexOf("zh") === 0;
+      var waBody;
+      if (useZh) {
+        waBody =
+          "【Tom Lee 小提琴工作室 — 網站查詢】\n" +
+          "姓名：" +
+          name +
+          "\n電郵：" +
+          email +
+          "\n電話：" +
+          (phone || "—") +
+          "\n意向：" +
+          purposeText +
+          "\n\n留言：\n" +
+          message;
+      } else {
+        waBody =
+          "Tom Lee Violin Studio — Website enquiry\n" +
+          "Name: " +
           name +
           "\nEmail: " +
           email +
@@ -370,10 +474,17 @@
           (phone || "—") +
           "\nInterest: " +
           purposeText +
-          "\n\n" +
-          message
-      );
-      window.location.href = "mailto:" + CONTACT_EMAIL + "?subject=" + subject + "&body=" + body;
+          "\n\nMessage:\n" +
+          message;
+      }
+      const waUrl = "https://wa.me/" + CONTACT_WHATSAPP_PHONE + "?text=" + encodeURIComponent(waBody);
+
+      showContactFormSuccess("whatsapp");
+      window.setTimeout(function () {
+        form.reset();
+        refreshContactFormUi();
+        window.location.href = waUrl;
+      }, 400);
     });
   }
 
@@ -732,6 +843,7 @@
     initAmbientDust();
     initHeroParallax();
     initContactForm();
+    initContactSuccessModal();
     initCertMarquee();
     initGroupScheduleModal();
     initCertLightbox();
