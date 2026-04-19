@@ -1120,6 +1120,27 @@ button.service-card__more-link {
   gap: var(--space-sm) var(--space-md);
 }
 
+.contact-email-line {
+  margin: 0.35rem 0 0;
+  width: 100%;
+  flex-basis: 100%;
+  font-size: 0.88rem;
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+}
+
+.contact-email-link {
+  color: var(--color-accent);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(197, 160, 89, 0.35);
+  transition: color var(--transition), border-color var(--transition);
+}
+
+.contact-email-link:hover {
+  color: #e4c77a;
+  border-bottom-color: rgba(228, 199, 122, 0.65);
+}
+
 .social-icons {
   list-style: none;
   margin: 0;
