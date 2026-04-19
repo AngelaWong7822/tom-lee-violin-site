@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Artistic gallery — concert solo highlights and industry collaborations. Tom Lee Violin Studio, Hong Kong."
+    />
+    <link rel="canonical" href="https://example.com/gallery.html" />
+    <link rel="icon" type="image/png" href="assets/logo.png" />
+    <title>Artistic Gallery | Tom Lee Violin Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-page="gallery">
+    <div class="scroll-progress" aria-hidden="true">
+      <div class="scroll-progress__bar" id="scroll-progress-bar"></div>
+    </div>
+
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="index.html" aria-label="Tom Lee Violin Studio — Home">
+          <img
+            class="brand-logo"
+            src="assets/logo.png"
+            alt="Tom Lee Violin Studio — professional violin teaching and performance logo"
+            decoding="async"
+          />
+          <span class="brand-text">
+            <span class="brand-name" data-en="Tom Lee" data-zh="Tom Lee">Tom Lee</span>
+            <span class="brand-tagline" data-en="Violin Studio" data-zh="小提琴工作室">Violin Studio</span>
+          </span>
+        </a>
+        <nav class="nav-primary" aria-label="Main navigation">
+          <ul class="nav-list">
+            <li><a href="index.html#about" data-en="About Tom Lee" data-zh="關於Tom Lee">About Tom Lee</a></li>
+            <li><a href="index.html#services" data-en="Services" data-zh="服務">Services</a></li>
+            <li><a href="index.html#media" data-en="Teaching &amp; performances" data-zh="影音與藝廊">Teaching &amp; performances</a></li>
+            <li><a href="index.html#testimonials" data-en="Highlights" data-zh="精選">Highlights</a></li>
+            <li><a href="index.html#faq" data-en="FAQ" data-zh="常見問題">FAQ</a></li>
+            <li><a href="index.html#contact" data-en="Contact" data-zh="聯絡">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button type="button" class="lang-btn is-active" data-lang="en" aria-pressed="true" data-en="EN" data-zh="EN">
+            EN
+          </button>
+          <button type="button" class="lang-btn" data-lang="zh" aria-pressed="false" data-en="中文" data-zh="中文">中文</button>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="section media-section" aria-labelledby="gallery-page-heading">
+        <div class="section-inner">
+          <header class="section-header">
+            <h1 id="gallery-page-heading" class="section-title" data-en="Artistic gallery" data-zh="藝術足跡">Artistic gallery</h1>
+            <p
+              class="section-subtitle"
+              data-en="Concert solo highlights and industry collaboration records."
+              data-zh="演奏會獨奏精選及業界合作紀錄。"
+            >
+              Concert solo highlights and industry collaboration records.
+            </p>
+          </header>
+          <p class="media-note" style="margin-bottom: var(--space-lg)">
+            <a href="videos-teaching.html" data-en="← Teaching videos" data-zh="← 教學影片">← Teaching videos</a>
+            <span aria-hidden="true" style="margin: 0 0.5rem; color: var(--color-muted)">·</span>
+            <a href="videos-popular.html" data-en="Pop &amp; contemporary →" data-zh="流行曲演奏 →">Pop &amp; contemporary →</a>
+          </p>
+
+          <div class="gallery-layout">
+            <div class="gallery-grid">
+            <figure class="gallery-item gallery-item--featured">
+              <div class="gallery-item__media">
+                <img
+                  src="assets/solo1.JPG"
+                  alt="Solo performance at Sapporo Concert Hall Kitara"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <figcaption
+                class="gallery-item__featured-caption"
+                data-en="Sapporo Concert Hall Kitara — solo performance"
+                data-zh="札幌市音樂廳 Kitara · 獨奏演出"
+              >
+                Sapporo Concert Hall Kitara — solo performance
+              </figcaption>
+            </figure>
+            <figure class="gallery-item gallery-item--featured">
+              <div class="gallery-item__media">
+                <img
+                  src="assets/solo2.JPEG"
+                  alt="Solo performance at Sapporo Sun Plaza Hall"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <figcaption
+                class="gallery-item__featured-caption"
+                data-en="Sapporo Sun Plaza Hall — solo performance"
+                data-zh="札幌サンプラザ音樂廳（Sapporo Sun Plaza Hall）· 獨奏演出"
+              >
+                Sapporo Sun Plaza Hall — solo performance
+              </figcaption>
+            </figure>
+            </div>
+
+            <div class="gallery-videos" role="group" aria-label="Performance videos">
+              <figure class="gallery-item gallery-item--video">
+                <div class="gallery-item__media">
+                  <div class="video-embed">
+                    <iframe
+                      class="video-iframe"
+                      data-title-en="ZEN «Back To You» — 30th anniversary"
+                      data-title-zh="ZEN《Back To You》三十週年"
+                      title="ZEN «Back To You» — 30th anniversary"
+                      src="https://www.facebook.com/plugins/video.php?height=314&amp;href=https%3A%2F%2Fwww.facebook.com%2FTomleeviolin%2Fvideos%2F1510185727091952%2F&amp;show_text=false&amp;width=560&amp;t=0"
+                      width="560"
+                      height="314"
+                      style="border: none; overflow: hidden"
+                      scrolling="no"
+                      allowfullscreen
+                      allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                      loading="lazy"
+                    ></iframe>
+                  </div>
+                </div>
+                <figcaption class="gallery-item__caption">
+                  <i class="fa-solid fa-star" aria-hidden="true"></i>
+                  <span data-en="ZEN «Back To You» — 30th anniversary" data-zh="ZEN《Back To You》三十週年"
+                    >ZEN «Back To You» — 30th anniversary</span
+                  >
+                </figcaption>
+              </figure>
+              <figure class="gallery-item gallery-item--video">
+                <div class="gallery-item__media">
+                  <div class="video-embed">
+                    <iframe
+                      class="video-iframe"
+                      data-title-en="Invited performance — World Trade Centre, Causeway Bay"
+                      data-title-zh="銅鑼灣世貿中心邀請演出"
+                      title="Invited performance — World Trade Centre, Causeway Bay"
+                      src="https://www.facebook.com/plugins/video.php?height=314&amp;href=https%3A%2F%2Fwww.facebook.com%2FTomleeviolin%2Fvideos%2F280438224789170%2F&amp;show_text=false&amp;width=560&amp;t=0"
+                      width="560"
+                      height="314"
+                      style="border: none; overflow: hidden"
+                      scrolling="no"
+                      allowfullscreen
+                      allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                      loading="lazy"
+                    ></iframe>
+                  </div>
+                </div>
+                <figcaption class="gallery-item__caption">
+                  <i class="fa-solid fa-star" aria-hidden="true"></i>
+                  <span
+                    data-en="Invited performance — World Trade Centre, Causeway Bay"
+                    data-zh="銅鑼灣世貿中心邀請演出"
+                    >Invited performance — World Trade Centre, Causeway Bay</span
+                  >
+                </figcaption>
+              </figure>
+            </div>
+
+            <div class="gallery-grid">
+            <figure class="gallery-item gallery-item--star">
+              <div class="gallery-item__media">
+                <img
+                  src="assets/concert1.jpg"
+                  alt="Performance at ZEN Back To You 30th anniversary concert, Hong Kong"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <figcaption class="gallery-item__caption">
+                <i class="fa-solid fa-star" aria-hidden="true"></i>
+                <span data-en="ZEN «Back To You» — 30th anniversary concert, Hong Kong" data-zh="ZEN《Back To You》30週年香港演唱會"
+                  >ZEN «Back To You» — 30th anniversary concert, Hong Kong</span
+                >
+              </figcaption>
+            </figure>
+            <figure class="gallery-item gallery-item--star">
+              <div class="gallery-item__media">
+                <img
+                  src="assets/LPG%20Cellu%20M6%20Infinity%20Product%20Launch.jpg"
+                  alt="Performance at LPG Cellu M6 Infinity product launch"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <figcaption class="gallery-item__caption">
+                <i class="fa-solid fa-star" aria-hidden="true"></i>
+                <span data-en="LPG Cellu M6 Infinity — product launch" data-zh="LPG Cellu M6 Infinity 產品發佈會"
+                  >LPG Cellu M6 Infinity — product launch</span
+                >
+              </figcaption>
+            </figure>
+            <figure class="gallery-item gallery-item--star">
+              <div class="gallery-item__media">
+                <img
+                  src="assets/Anniversary%20Gala.jpg"
+                  alt="Violin performance at Hong Kong Gifted Education Teachers' Association anniversary gala"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <figcaption class="gallery-item__caption">
+                <i class="fa-solid fa-star" aria-hidden="true"></i>
+                <span
+                  data-en="Hong Kong Gifted Education Teachers' Association — anniversary gala (violin)"
+                  data-zh="香港資優教育教師協會周年晚會小提琴獻奏"
+                  >Hong Kong Gifted Education Teachers' Association — anniversary gala (violin)</span
+                >
+              </figcaption>
+            </figure>
+
+            <figure class="gallery-item gallery-item--star">
+              <div class="gallery-item__media">
+                <img
+                  src="assets/Star1.jpg"
+                  alt="Symphony · Nodame-Cantabile performance"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <figcaption class="gallery-item__caption">
+                <i class="fa-solid fa-star" aria-hidden="true"></i>
+                <span data-en="Symphony · Nodame-Cantabile" data-zh="交響情人夢 · Nodame">Symphony · Nodame-Cantabile</span>
+              </figcaption>
+            </figure>
+            <figure class="gallery-item gallery-item--star">
+              <div class="gallery-item__media">
+                <img
+                  src="assets/Star2.jpg"
+                  alt="JOOX Music in the city performance"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <figcaption class="gallery-item__caption">
+                <i class="fa-solid fa-star" aria-hidden="true"></i>
+                <span data-en="JOOX Music in the city" data-zh="JOOX 城市音樂">JOOX Music in the city</span>
+              </figcaption>
+            </figure>
+            <figure class="gallery-item gallery-item--star">
+              <div class="gallery-item__media">
+                <img
+                  src="assets/Star3.jpg"
+                  alt="MacPherson Festival x Phil Like Live performance"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <figcaption class="gallery-item__caption">
+                <i class="fa-solid fa-star" aria-hidden="true"></i>
+                <span data-en="MacPherson Festival × Phil Like Live" data-zh="麥花臣節 × Phil Like Live"
+                  >MacPherson Festival × Phil Like Live</span
+                >
+              </figcaption>
+            </figure>
+            <figure class="gallery-item gallery-item--star">
+              <div class="gallery-item__media">
+                <img
+                  src="assets/Star4.jpg"
+                  alt="Performance with Hana Kuk"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <figcaption class="gallery-item__caption">
+                <i class="fa-solid fa-star" aria-hidden="true"></i>
+                <span data-en="Performance with Hana Kuk" data-zh="與菊梓喬（Hana Kuk）合作演出">Performance with Hana Kuk</span>
+              </figcaption>
+            </figure>
+            </div>
+          </div>
+
+          <p
+            class="gallery-note"
+            data-en="The first row highlights solo concert photos, followed by performance clips and a photo grid of collaborations (gold captions)."
+            data-zh="首行為獨奏會精選；其後為演出影片與合作演出相片網格（金色說明為重點項目）。"
+          >
+            The first row highlights solo concert photos, followed by performance clips and a photo grid of collaborations (gold captions).
+          </p>
+          <p class="media-note">
+            <a
+              href="index.html#media"
+              data-en="← Back to Teaching &amp; performance highlights on home"
+              data-zh="← 返回主頁「影音與藝廊」入口"
+              >← Back to Teaching &amp; performance highlights on home</a
+            >
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <p
+          class="footer-address"
+          data-en="25 Tong Mi Road, Spark City Mong Kok, Mong Kok, Hong Kong"
+          data-zh="旺角塘尾道25號 Spark City Mong Kok 俊薈旺角 · 香港"
+        >
+          25 Tong Mi Road, Spark City Mong Kok, Mong Kok, Hong Kong
+        </p>
+        <nav class="footer-social" aria-label="Social media">
+          <ul class="social-icons social-icons--footer" role="list">
+            <li>
+              <a class="social-icon-link" href="https://www.facebook.com/Tomleeviolin/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"
+                ><span class="social-icon-ring"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></span
+              ></a>
+            </li>
+            <li>
+              <a class="social-icon-link" href="https://www.instagram.com/tomleeviolin/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"
+                ><span class="social-icon-ring"><i class="fa-brands fa-instagram" aria-hidden="true"></i></span
+              ></a>
+            </li>
+            <li>
+              <a class="social-icon-link" href="https://www.youtube.com/@tomleeviolin" target="_blank" rel="noopener noreferrer" aria-label="YouTube"
+                ><span class="social-icon-ring"><i class="fa-brands fa-youtube" aria-hidden="true"></i></span
+              ></a>
+            </li>
+            <li>
+              <a class="social-icon-link" href="https://wa.me/85295179962" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"
+                ><span class="social-icon-ring"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></span
+              ></a>
+            </li>
+          </ul>
+        </nav>
+        <p class="footer-copy" id="footer-copyright"></p>
+      </div>
+    </footer>
+
+    <a
+      class="booking-fab"
+      href="https://wa.me/85295179962"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Book on WhatsApp"
+      title="WhatsApp"
+    >
+      <svg class="booking-fab__icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+        <path
+          d="M9 18V5l12-2v13"
+          stroke="currentColor"
+          stroke-width="1.75"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path d="m6 12 6-4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
+        <circle cx="6" cy="18" r="2.75" stroke="currentColor" stroke-width="1.75" />
+      </svg>
+    </a>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
