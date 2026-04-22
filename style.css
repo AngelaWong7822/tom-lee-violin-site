@@ -1088,10 +1088,29 @@ button.service-card__more-link {
 }
 
 .contact-address {
-  margin: 0 0 var(--space-md);
+  margin: 0 0 var(--space-sm);
   font-size: 0.95rem;
   color: var(--color-text);
   line-height: 1.65;
+}
+
+.contact-map-embed {
+  position: relative;
+  width: 100%;
+  margin: 0 0 var(--space-md);
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.06);
+  aspect-ratio: 4 / 3;
+  min-height: 200px;
+}
+
+.contact-map-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
 
 .contact-map-link {
