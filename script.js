@@ -45,8 +45,8 @@
 
   const documentTitle = {
     home: {
-      en: "Tom Lee Violin Studio | Violin Lessons Hong Kong | Professional Violin Teacher",
-      zh: "Tom Lee 小提琴工作室 | 學小提琴・香港小提琴老師",
+      en: "Tom's Violin Studio | 專業小提琴老師",
+      zh: "Tom's Violin Studio | 專業小提琴老師",
     },
     "videos-teaching": {
       en: "Teaching Videos | Tom Lee Violin Studio",
