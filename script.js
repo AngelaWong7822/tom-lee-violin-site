@@ -26,8 +26,8 @@
 
   const metaDescription = {
     home: {
-      en: "Tom Lee Violin Studio — Professional violin instruction and performance in Hong Kong. Private violin and viola lessons, group classes, music theory, violin sales, trial lessons, events, and exam coaching.",
-      zh: "Tom Lee 小提琴工作室 — 香港專業小提琴教學與演出。個別課程、中提琴、小組課、樂理、小提琴買賣、試堂、活動演出及考級指導。",
+      en: "Violin lessons in Hong Kong (Mong Kok) with Tom Lee — violin teacher for kids and adults, ABRSM and popular styles. 香港學小提琴、小提琴老師。Book a trial.",
+      zh: "香港小提琴老師 Tom Lee｜旺角工作室學小提琴、小提琴課程，兒童與成人、英皇與流行曲。Violin lessons in HK. 預約試堂。",
     },
     "videos-teaching": {
       en: "Teaching videos and demonstrations — Tom Lee Violin Studio, Hong Kong. Technique, repertoire tips, and practice ideas.",
@@ -45,8 +45,8 @@
 
   const documentTitle = {
     home: {
-      en: "Tom Lee Violin Studio | Professional Violin Teaching & Performance",
-      zh: "Tom Lee 小提琴工作室 | 專業小提琴教學與演出",
+      en: "Tom Lee Violin Studio | Violin Lessons Hong Kong | Professional Violin Teacher",
+      zh: "Tom Lee 小提琴工作室 | 學小提琴・香港小提琴老師",
     },
     "videos-teaching": {
       en: "Teaching Videos | Tom Lee Violin Studio",
